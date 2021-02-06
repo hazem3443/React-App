@@ -1,17 +1,23 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import reactDom from 'react-dom';
+import {BrowserRouter
+    // BrowserRouter as Router,
+    // Switch,
+    // Route,
+    // Link
+  } from "react-router-dom";
+// import ReactDom from 'react-dom';
+// import Product from "./components/product";
+// import ShopingCart from './components/shopingCart';
+import App from './components/app';
 
-ReactDOM.render(
-  <React.StrictMode>
+
+import '../node_modules/bootstrap/dist/css/bootstrap.css';
+import '../node_modules/@fortawesome/fontawesome-free/css/all.css';
+import '../node_modules/react-toastify/dist/ReactToastify.css';
+
+reactDom.render(
+<BrowserRouter>
     <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+</BrowserRouter>
+,document.querySelector("#root"));
